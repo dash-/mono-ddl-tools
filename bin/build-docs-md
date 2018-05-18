@@ -1,0 +1,36 @@
+#!/bin/sh
+repoRoot="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+cd $repoRoot
+
+
+ensureDirectory(){
+  dir="$1"
+  [[ -d "$dir" ]] || mkdir "$dir"
+}
+
+buildDoc(){
+  source="$1"
+  destination="$2"
+  # tail removes undesired text prefixing document
+  npm run build-doc-md "$source" | tail -n +5 > "$destination"
+}
+
+buildDocs(){
+  basePath="$1"
+  storeTo="$2"
+
+  for filepath in $basePath/*.js; do
+    filename=$(basename $filepath | sed 's/\.js$//')
+    buildDoc "$filepath" "$storeTo/$filename.md"
+  done
+}
+
+packages='./packages'
+docs='./docs'
+coreSrc="$packages/ddl-tools/src"
+coreDocs="$docs/ddl-tools"
+
+ensureDirectory $docs
+ensureDirectory $coreDocs
+
+buildDoc "$coreSrc/index.js" "$coreDocs/ddl-tools.md"

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build-doc-md": "jsdoc2md",
+    "build-docs-md": "bin/build-docs-md"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5",
+    "jsdoc-to-markdown": "^3.0.3"
+  }
+}
