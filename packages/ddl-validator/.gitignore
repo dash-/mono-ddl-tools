@@ -1,0 +1,26 @@
+# Editor
+.DS_Store
+*.swp
+*.swo
+.vscode
+.idea/
+
+# Node / npm
+node_modules
+npm-debug.log
+
+# Build directory
+dist
+lib
+
+# Dedicated local prefix
+local-*.*
+
+# Other
+*.log
+report/
+reports/
+reporting/
+test/EndToEnd/results/
+selenium-debug.log
+nightwatch.json
