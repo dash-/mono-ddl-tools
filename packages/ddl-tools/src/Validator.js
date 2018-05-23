@@ -51,7 +51,7 @@ const Validator = function Validator(ddlValidator) {
    * Allows package consumers (via `DDLTools.configure()`) to customize
    * validation functionality.
    *
-   * @params {object} config - Configuration options as key-value pairs
+   * @params {object} options - Configuration options as key-value pairs
    */
   this.configure = (options = {}) => {
     logger.configure(options);
