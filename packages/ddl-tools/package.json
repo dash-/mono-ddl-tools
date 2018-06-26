@@ -2,6 +2,7 @@
   "name": "ddl-tools",
   "version": "0.0.2",
   "description": "Digital data layer helper functions supporting data layer schema validation for highly-decoupled analytics reporting",
+  "license": "Apache-2.0",
   "main": "lib/DDLTools.js",
   "directories": {
     "lib": "lib/"
