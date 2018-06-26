@@ -1,7 +1,8 @@
 {
   "name": "ddl-tools-plugin-cart",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cart plugin for ddl-tools, a digital data layer helper utility with data layer schema validation for highly-decoupled analytics reporting",
+  "license": "Apache-2.0",
   "main": "lib/cartPlugin.js",
   "directories": {
     "lib": "lib/"
@@ -33,7 +34,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "ddl-tools": "^0.0.1",
+    "ddl-tools": "^0.0.2",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
