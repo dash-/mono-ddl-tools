@@ -18,9 +18,3 @@ local-*.*
 
 # Other
 *.log
-report/
-reports/
-reporting/
-test/EndToEnd/results/
-selenium-debug.log
-nightwatch.json
