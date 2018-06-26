@@ -54,13 +54,13 @@ Once you have this package installed locally, from the package's base
 directory, run `npm run test`.
 
 ```
-> ddl-tools@0.0.1 pretest /Users/ei2779/src/public/mono-ddl-tools/packages/ddl-tools
+> ddl-tools@0.0.1 pretest mono-ddl-tools/packages/ddl-tools
 > npm run -s lint
 
 Lint finished...
 
 
-> ddl-tools@0.0.1 test /Users/ei2779/src/public/mono-ddl-tools/packages/ddl-tools
+> ddl-tools@0.0.1 test mono-ddl-tools/packages/ddl-tools
 > jasmine test/specs/**/*Spec.js
 
 Started
