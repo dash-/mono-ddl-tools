@@ -1,6 +1,6 @@
 {
   "name": "ddl-validator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Digital Data Layer schema validation for ddl-tools",
   "main": "lib/DDLValidator.js",
   "directories": {
