@@ -225,11 +225,11 @@ ddlTools.configure({
    * Extends the DDLTools instance with the methods from the provided plugin.
    *
    * @example
-const pagePlugin = require('era-analytics/plugins/page');
+const pagePlugin = require('ddl-tools-plugin-page');
 ddlTools.use(page);
    * @example
-const pagePlugin = require('era-analytics/plugins/page');
-const trxsPlugin = require('era-analytics/plugins/transactions');
+const pagePlugin = require('ddl-tools-plugin-page');
+const trxsPlugin = require('ddl-tools-plugin-transactions');
 ddlTools.use(pagePlugin, trxsPlugin);
    * @param {object} plugin - The plugin to use
    * @returns {object} - Self reference for chaining
