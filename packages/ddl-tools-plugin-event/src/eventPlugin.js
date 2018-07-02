@@ -43,8 +43,7 @@ const merge = (target, path, source) => {
  */
 
 /**
- * Helper class to build event objects that conform to the ESI ERA digital data
- * layer recommendation based on the W3C draft specification.
+ * Helper class to build event objects for use in a digital data layer.
  *
  * @class
  */
@@ -308,60 +307,12 @@ event
 .setPrimaryCategory('pageNavigation')
 .setSubCategory('navigationMenu');
 ddlTools.addEvent(event);
- * @example
-window.onerror = function(msg, url, line, col, error) {
-const errorEvent = ddlTools.transformErrorToEvent(error);
-ddlTools.addEvent(errorEvent);
-};
-   * @example
-getNetworkResource().catch((error) => {
-const errorEvent = ddlTools.transformErrorToEvent(error);
-errorEvent
-  .setEventName('Network resource failure')
-  .setEffect('default network resource');
-ddlTools.addEvent(errorEvent);
-});
    * @param {(PlainEvent|Event)} event - Event to add
    * @returns {object} - Self reference for chaining
    */
   addEvent: function addEvent(event) {
     this.push(['event'], Event.normalize(event));
     return this;
-  },
-
-  /**
-   * Transforms an Error object into an Event object.
-   *
-   * @example
-window.onerror = function(msg, url, line, col, error) {
-const errorEvent = ddlTools.transformErrorToEvent(error);
-ddlTools.addEvent(errorEvent);
-};
-   * @example
-getNetworkResource().catch((error) => {
-const errorEvent = ddlTools.transformErrorToEvent(error);
-errorEvent
-  .setEventName('Network resource failure')
-  .setEffect('default network resource');
-ddlTools.addEvent(errorEvent);
-});
-   * @param {(Error|object)} error - The Error to transform into an Event
-   * @returns {Event} - The Event resulting from the transformation
-   */
-  transformErrorToEvent: function transformErrorToEvent(error = {}) {
-    const event = {
-      eventInfo: {
-        name: error.name || 'UnknownError',
-        type: error.type || 'javascriptError',
-        cause: error.message || 'Cause unknown',
-        timeStamp: error.timeStamp || new Date(),
-      },
-      category: {
-        primaryCategory: error.primaryCategory || 'error',
-        subCategory: error.subCategory || 'clientError',
-      },
-    };
-    return new Event(event);
   },
 };
 
