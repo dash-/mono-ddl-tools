@@ -29,7 +29,7 @@ npm install --save 'ddl-tools'
 
 ## Technical Documentation
 
-* [ddl-tools](docs/ddl-tools.md)
+* [ddl-tools](../../docs/ddl-tools.md)
 * [ddl-validator](docs/ddl-validator.md)
 * [ddl-tools-plugin-cart-deep](docs/ddl-tools-plugin-cart-deep.md)
 * [ddl-tools-plugin-cart](docs/ddl-tools-plugin-cart.md)
