@@ -1,8 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 repoRoot="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 cd $repoRoot
 
+# Directories / Configuration
+packages='./packages'
+docs='./docs'
 
+# Functions
 ensureDirectory(){
   dir="$1"
   [[ -d "$dir" ]] || mkdir "$dir"
@@ -15,22 +19,60 @@ buildDoc(){
   npm run build-doc-md "$source" | tail -n +5 > "$destination"
 }
 
-buildDocs(){
-  basePath="$1"
-  storeTo="$2"
-
-  for filepath in $basePath/*.js; do
-    filename=$(basename $filepath | sed 's/\.js$//')
-    buildDoc "$filepath" "$storeTo/$filename.md"
-  done
-}
-
-packages='./packages'
-docs='./docs'
-coreSrc="$packages/ddl-tools/src"
-coreDocs="$docs/ddl-tools"
-
+# Initial setup
 ensureDirectory $docs
-ensureDirectory $coreDocs
 
-buildDoc "$coreSrc/index.js" "$coreDocs/ddl-tools.md"
+# ddl-tools
+from="$packages/ddl-tools/src/DDLTools.js"
+to="$docs/ddl-tools.md"
+buildDoc "$from" "$to"
+
+# ddl-validator
+from="$packages/ddl-validator/src/DDLValidator.js"
+to="$docs/ddl-validator.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-cart-deep
+from="$packages/ddl-tools-plugin-cart-deep/src/cartDeepPlugin.js"
+to="$docs/ddl-tools-plugin-cart-deep.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-cart
+from="$packages/ddl-tools-plugin-cart/src/cartPlugin.js"
+to="$docs/ddl-tools-plugin-cart.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-event
+from="$packages/ddl-tools-plugin-event/src/eventPlugin.js"
+to="$docs/ddl-tools-plugin-event.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-page-deep
+from="$packages/ddl-tools-plugin-page-deep/src/pageDeepPlugin.js"
+to="$docs/ddl-tools-plugin-page-deep.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-page
+from="$packages/ddl-tools-plugin-page/src/pagePlugin.js"
+to="$docs/ddl-tools-plugin-page.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-product
+from="$packages/ddl-tools-plugin-product/src/productPlugin.js"
+to="$docs/ddl-tools-plugin-product.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-transaction-deep
+from="$packages/ddl-tools-plugin-transaction-deep/src/transactionDeepPlugin.js"
+to="$docs/ddl-tools-plugin-transaction-deep.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-transaction
+from="$packages/ddl-tools-plugin-transaction/src/transactionPlugin.js"
+to="$docs/ddl-tools-plugin-transaction.md"
+buildDoc "$from" "$to"
+
+# ddl-tools-plugin-user
+from="$packages/ddl-tools-plugin-user/src/userPlugin.js"
+to="$docs/ddl-tools-plugin-user.md"
+buildDoc "$from" "$to"

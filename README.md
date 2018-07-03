@@ -1,11 +1,15 @@
 # Repository: mono-ddl-tools
 
 Monorepo featuring a Digital Data Layer (DDL) helper utility package, DDL
-validator, plugins packages, and an examples package for easy-to-use,
-highly-decoupled, and full-featured analytics reporting.
+validator, plugins packages, and an examples package (coming soon) for
+easy-to-use, highly-decoupled, and full-featured analytics reporting.
 
 Works with Adobe Dynamic Tag Manager (DTM), Adobe Launch, Google Tag Manager,
 Tealium, and any other tag manager that supports a digital data layer.
+
+*NOTE:* Most plugins are designed for the Digital Data Layer 1.0 draft
+specification published by the W3C Customer Experience Digital Data Community
+Group located [here](https://www.w3.org/2013/12/ceddl-201312.pdf).
 
 
 ## Status
@@ -19,20 +23,22 @@ by submitting issue tickets for any issues you experience.
 - Node v6 or higher
 - npm v3 or higher
 - yarn
-*TODO*
 
 
-## Installation and Setup
+## Local Installation
 
-To install the full git monorepo, just clone the repository into the desired
-base directory.
+These steps are not necessary (nor useful) for normal use.  These steps are only
+necessary to view the source or run tests.
 
-*TODO*
+To install locally, clone this repository, install dependencies, and build it.
+
+On a Mac or Linux variant, you can do this with the following commands in `bash`:
 
 ```
-git clone *TBD*
+git clone https://github.com/dash-/mono-ddl-tools.git
+cd mono-ddl-tools
+npm run build
 ```
-
 
 ## Packages
 

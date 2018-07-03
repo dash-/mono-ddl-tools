@@ -1,0 +1,60 @@
+#!/bin/bash
+repoRoot="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+cd $repoRoot
+
+cd packages/ddl-tools/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-validator/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-cart-deep/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-cart/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-event/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-page-deep/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-page/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-product/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-transaction-deep/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-transaction/
+yarn install
+npm run build
+cd $repoRoot
+
+cd packages/ddl-tools-plugin-user/
+yarn install
+npm run build
+cd $repoRoot
+
+
