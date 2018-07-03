@@ -2,7 +2,7 @@
 
 A digital data layer helper utility for highly-decoupled analytics reporting.
 This utility includes a limited number of general-use functions and supports
-external data layer schema validation (see [ddl-validator](../ddl-validator)).
+external data layer schema validation (see [ddl-validator](packages/ddl-validator)).
 It can also be extended to provide additional functionality by passing
 specialized plugins to the `use` function.
 
@@ -29,17 +29,17 @@ npm install --save 'ddl-tools'
 
 ## Technical Documentation
 
-* [ddl-tools](../../docs/ddl-tools.md)
-* [ddl-validator](../../docs/ddl-validator.md)
-* [ddl-tools-plugin-cart-deep](../../docs/ddl-tools-plugin-cart-deep.md)
-* [ddl-tools-plugin-cart](../../docs/ddl-tools-plugin-cart.md)
-* [ddl-tools-plugin-event](../../docs/ddl-tools-plugin-event.md)
-* [ddl-tools-plugin-page-deep](../../docs/ddl-tools-plugin-page-deep.md)
-* [ddl-tools-plugin-page](../../docs/ddl-tools-plugin-page.md)
-* [ddl-tools-plugin-product](../../docs/ddl-tools-plugin-product.md)
-* [ddl-tools-plugin-transaction-deep](../../docs/ddl-tools-plugin-transaction-deep.md)
-* [ddl-tools-plugin-transaction](../../docs/ddl-tools-plugin-transaction.md)
-* [ddl-tools-plugin-user](../../docs/ddl-tools-plugin-user.md)
+* [ddl-tools](docs/ddl-tools.md)
+* [ddl-validator](docs/ddl-validator.md)
+* [ddl-tools-plugin-cart-deep](docs/ddl-tools-plugin-cart-deep.md)
+* [ddl-tools-plugin-cart](docs/ddl-tools-plugin-cart.md)
+* [ddl-tools-plugin-event](docs/ddl-tools-plugin-event.md)
+* [ddl-tools-plugin-page-deep](docs/ddl-tools-plugin-page-deep.md)
+* [ddl-tools-plugin-page](docs/ddl-tools-plugin-page.md)
+* [ddl-tools-plugin-product](docs/ddl-tools-plugin-product.md)
+* [ddl-tools-plugin-transaction-deep](docs/ddl-tools-plugin-transaction-deep.md)
+* [ddl-tools-plugin-transaction](docs/ddl-tools-plugin-transaction.md)
+* [ddl-tools-plugin-user](docs/ddl-tools-plugin-user.md)
 
 
 ## Local Installation

@@ -4,7 +4,7 @@ Monorepo featuring:
 * [Digital Data Layer (DDL) helper utility package](#package-ddl-tools)
 * [DDL validator](#package-ddl-validator)
 * [Plugins packages](#package-plugins)
-* Examples package (COMING SOON)
+* [Examples package](#package-ddl-tools-examples)
 
 Developed at a Fortune 100 company, released anonymously with permission under
 the Apache 2.0 license, for easy-to-use, highly-decoupled, flexible, and
@@ -178,6 +178,7 @@ For more information, see:
 * [Technical Documentation](docs/ddl-tools-plugin-user.md)
 
 
+<a name="package-ddl-tools-examples"></a>
 ### Package: ddl-tools-examples (COMING SOON)
 
 Demonstrates working examples of using `ddl-tools`.  Both Single Page
@@ -185,7 +186,7 @@ Application (SPA) and non-SPA (Legacy) web applications are included in the
 examples.
 
 For more information, see:
-* [`packages/ddl-tools-examples/README.md`](./packages/ddl-tools-examples)
+* [`packages/ddl-tools-examples/README.md`](packages/ddl-tools-examples)
 
 
 ## Local Installation
