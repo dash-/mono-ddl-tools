@@ -40,13 +40,13 @@ Customer Experience Digital Data Community Group located
 
 A digital data layer helper utility for highly-decoupled analytics reporting.
 This utility includes a limited number of general-use functions and supports
-external data layer schema validation (see [ddl-validator](./packages/ddl-validator)).
+external data layer schema validation (see [ddl-validator](packages/ddl-validator)).
 It can also be extended to provide additional functionality by passing
 specialized plugins to the `use` function.
 
 For more information, see:
-* [`packages/ddl-tools/README.md`](./packages/ddl-tools)
-* [Technical Documentation](../../docs/ddl-tools.md)
+* [`packages/ddl-tools/README.md`](packages/ddl-tools)
+* [Technical Documentation](docs/ddl-tools.md)
 
 
 <a name="package-ddl-validator"></a>
@@ -56,8 +56,8 @@ Provides schema validation for development.  In production, schema validation is
 typically disabled (the schema validator is a development dependency).
 
 For more information, see:
-* [`packages/ddl-validator/README.md`](./packages/ddl-validator)
-* [Technical Documentation](../../docs/ddl-validator.md)
+* [`packages/ddl-validator/README.md`](packages/ddl-validator)
+* [Technical Documentation](docs/ddl-validator.md)
 
 
 <a name="package-plugins"></a>
@@ -89,8 +89,8 @@ Cart plugin for recording information about a shopping cart such as cart totals
 and items.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-cart/README.md`](./packages/ddl-tools-plugin-cart)
-* [Technical Documentation](../../docs/ddl-tools-plugin-cart.md)
+* [`packages/ddl-tools-plugin-cart/README.md`](packages/ddl-tools-plugin-cart)
+* [Technical Documentation](docs/ddl-tools-plugin-cart.md)
 
 
 <a name="package-ddl-tools-plugin-cart-deep"></a>
@@ -100,8 +100,8 @@ Detailed cart plugin similar to the normal cart plugin but which adds numerous
 convenience functions.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-cart-deep/README.md`](./packages/ddl-tools-plugin-cart-deep)
-* [Technical Documentation](../../docs/ddl-tools-plugin-cart-deep.md)
+* [`packages/ddl-tools-plugin-cart-deep/README.md`](packages/ddl-tools-plugin-cart-deep)
+* [Technical Documentation](docs/ddl-tools-plugin-cart-deep.md)
 
 
 <a name="package-ddl-tools-plugin-event"></a>
@@ -111,8 +111,8 @@ Event plugin for recording events that occur within a page such as errors or
 user actions.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-event/README.md`](./packages/ddl-tools-plugin-event)
-* [Technical Documentation](../../docs/ddl-tools-plugin-event.md)
+* [`packages/ddl-tools-plugin-event/README.md`](packages/ddl-tools-plugin-event)
+* [Technical Documentation](docs/ddl-tools-plugin-event.md)
 
 
 <a name="package-ddl-tools-plugin-page"></a>
@@ -122,8 +122,8 @@ Page plugin for recording information about a page such as the page name or
 referrer URL.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-page/README.md`](./packages/ddl-tools-plugin-page)
-* [Technical Documentation](../../docs/ddl-tools-plugin-page.md)
+* [`packages/ddl-tools-plugin-page/README.md`](packages/ddl-tools-plugin-page)
+* [Technical Documentation](docs/ddl-tools-plugin-page.md)
 
 
 <a name="package-ddl-tools-plugin-page-deep"></a>
@@ -133,8 +133,8 @@ Detailed page plugin similar to the normal page plugin but which adds numerous
 convenience functions.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-page-deep/README.md`](./packages/ddl-tools-plugin-page-deep)
-* [Technical Documentation](../../docs/ddl-tools-plugin-page-deep.md)
+* [`packages/ddl-tools-plugin-page-deep/README.md`](packages/ddl-tools-plugin-page-deep)
+* [Technical Documentation](docs/ddl-tools-plugin-page-deep.md)
 
 
 <a name="package-ddl-tools-plugin-product"></a>
@@ -143,8 +143,8 @@ For more information, see:
 Product plugin for recording information about products displayed on a page.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-product/README.md`](./packages/ddl-tools-plugin-product)
-* [Technical Documentation](../../docs/ddl-tools-plugin-product.md)
+* [`packages/ddl-tools-plugin-product/README.md`](packages/ddl-tools-plugin-product)
+* [Technical Documentation](docs/ddl-tools-plugin-product.md)
 
 
 <a name="package-ddl-tools-plugin-transaction"></a>
@@ -153,8 +153,8 @@ For more information, see:
 Transaction plugin for recording information about a purchasing transaction.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-transaction/README.md`](./packages/ddl-tools-plugin-transaction)
-* [Technical Documentation](../../docs/ddl-tools-plugin-transaction.md)
+* [`packages/ddl-tools-plugin-transaction/README.md`](packages/ddl-tools-plugin-transaction)
+* [Technical Documentation](docs/ddl-tools-plugin-transaction.md)
 
 
 <a name="package-ddl-tools-plugin-transaction-deep"></a>
@@ -164,8 +164,8 @@ Detailed transaction plugin similar to the normal transaction plugin but which
 adds numerous convenience functions.
 
 For more information, see:
-* [`packages/ddl-tools-plugin-transaction-deep/README.md`](./packages/ddl-tools-plugin-transaction-deep)
-* [Technical Documentation](../../docs/ddl-tools-plugin-transaction-deep.md)
+* [`packages/ddl-tools-plugin-transaction-deep/README.md`](packages/ddl-tools-plugin-transaction-deep)
+* [Technical Documentation](docs/ddl-tools-plugin-transaction-deep.md)
 
 
 <a name="package-ddl-tools-plugin-user"></a>
@@ -174,8 +174,8 @@ For more information, see:
 Transaction plugin for recording information about the user(s).
 
 For more information, see:
-* [`packages/ddl-tools-plugin-user/README.md`](./packages/ddl-tools-plugin-user)
-* [Technical Documentation](../../docs/ddl-tools-plugin-user.md)
+* [`packages/ddl-tools-plugin-user/README.md`](packages/ddl-tools-plugin-user)
+* [Technical Documentation](docs/ddl-tools-plugin-user.md)
 
 
 ### Package: ddl-tools-examples (COMING SOON)
