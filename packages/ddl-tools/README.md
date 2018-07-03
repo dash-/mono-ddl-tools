@@ -65,6 +65,8 @@ Once you have this package installed locally, from the package's base
 directory, run `npm run test`.
 
 ```
+ddl-tools $ npm run test
+
 > ddl-tools@0.0.1 pretest mono-ddl-tools/packages/ddl-tools
 > npm run -s lint
 
@@ -84,7 +86,21 @@ Finished in 0.024 seconds
 
 ## Contribute
 
+The easiest way to contribute is to
+[submit issues on GitHub](https://github.com/dash-/mono-ddl-tools/issues).
+We welcome feedback and **deeply appreciate** your contribution of an issue for:
+
+* Improvement ideas
+* Feature requests
+* Bugs
+
+Of course, code contributions are welcome as well!
+
 To contribute code to this project, first fork the monorepo in GitHub, create
 a feature or bug branch, and commit code to the branch.  You can then create a
-PR against the main repository.
+PR against the main repository.  More information can be found on this topic in
+Rob Allen's guide:
+
+* [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
+
 
