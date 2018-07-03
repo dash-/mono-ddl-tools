@@ -2,7 +2,8 @@
   "scripts": {
     "build-doc-md": "jsdoc2md",
     "build-docs-md": "bin/build-docs-md",
-    "build": "bin/build"
+    "build": "bin/build",
+    "test": "bin/test"
   },
   "devDependencies": {
     "jsdoc": "^3.5.5",
