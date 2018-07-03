@@ -83,7 +83,7 @@ examples for your own plugins.
 
 
 <a name="package-ddl-tools-plugin-cart"></a>
-### Plugin Package: ddl-tools-plugin-cart
+#### Plugin Package: ddl-tools-plugin-cart
 
 Cart plugin for recording information about a shopping cart such as cart totals
 and items.
@@ -94,7 +94,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-cart-deep"></a>
-### Plugin Package: ddl-tools-plugin-cart-deep
+#### Plugin Package: ddl-tools-plugin-cart-deep
 
 Detailed cart plugin similar to the normal cart plugin but which adds numerous
 convenience functions.
@@ -105,7 +105,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-event"></a>
-### Plugin Package: ddl-tools-plugin-event
+#### Plugin Package: ddl-tools-plugin-event
 
 Event plugin for recording events that occur within a page such as errors or
 user actions.
@@ -116,7 +116,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-page"></a>
-### Plugin Package: ddl-tools-plugin-page
+#### Plugin Package: ddl-tools-plugin-page
 
 Page plugin for recording information about a page such as the page name or
 referrer URL.
@@ -127,7 +127,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-page-deep"></a>
-### Plugin Package: ddl-tools-plugin-page-deep
+#### Plugin Package: ddl-tools-plugin-page-deep
 
 Detailed page plugin similar to the normal page plugin but which adds numerous
 convenience functions.
@@ -138,7 +138,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-product"></a>
-### Plugin Package: ddl-tools-plugin-product
+#### Plugin Package: ddl-tools-plugin-product
 
 Product plugin for recording information about products displayed on a page.
 
@@ -148,7 +148,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-transaction"></a>
-### Plugin Package: ddl-tools-plugin-transaction
+#### Plugin Package: ddl-tools-plugin-transaction
 
 Transaction plugin for recording information about a purchasing transaction.
 
@@ -158,7 +158,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-transaction-deep"></a>
-### Plugin Package: ddl-tools-plugin-transaction-deep
+#### Plugin Package: ddl-tools-plugin-transaction-deep
 
 Detailed transaction plugin similar to the normal transaction plugin but which
 adds numerous convenience functions.
@@ -169,7 +169,7 @@ For more information, see:
 
 
 <a name="package-ddl-tools-plugin-user"></a>
-### Plugin Package: ddl-tools-plugin-user
+#### Plugin Package: ddl-tools-plugin-user
 
 Transaction plugin for recording information about the user(s).
 
