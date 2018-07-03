@@ -34,7 +34,7 @@ necessary to view the source or run tests.
 To install locally, clone this repository, install dependencies, and build it.
 
 ```
-npm clone https://github.com/dash-/mono-ddl-tools.git
+git clone https://github.com/dash-/mono-ddl-tools.git
 cd mono-ddl-tools/packages/ddl-tools-plugin-transaction
 yarn install
 npm run build
