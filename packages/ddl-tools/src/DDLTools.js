@@ -11,6 +11,55 @@ const resetUtils = require('./resetUtils');
 const { errorGenerators } = Logger;
 
 /**
+ * DDLTools reset options.
+ *
+ * @typedef DDLToolsConfigResetOptions
+ * @property {string[]} include - Keys to be removed upon reset
+ * @property {string[]} exclude - Keys to be ignored upon reset
+ */
+
+/**
+ * A logger.
+ *
+ * @typedef DDLToolsConfigLogger
+ * @property {function} debug - Function to call for non-critical logging
+ * @property {function} error - Function to call for critical logging
+ */
+
+/**
+ * A digital data layer validator.
+ *
+ * @typedef DDLToolsConfigValidator
+ * @property {function} operationIsValid - Function called to determine whether
+ *   changing a property at a path specified to a value specified should be
+ *   allowed.
+ * @property {function} configure - Function called to configure the validator.
+ */
+
+/**
+ * DDLTools configuration object.
+ *
+ * @typedef DDLToolsConfig
+ * @property {boolean|DDLToolsConfigLogger} logger - Either true to enable
+ *   logging with the default logger; false to disable logging; or an
+ *   actual logger object with appropriate methods to use for logging (default:
+ *   true).
+ * @property {boolean} throw - True if methods should throw an exception when an
+ *   invalid operation is detected; false if exceptions should be ignored
+ *   (default: false).
+ * @property {boolean} verbose - True to enable extra logging information; false
+ *   to keep the console clean (default)
+ *   invalid operation is detected; false if exceptions should be ignored
+ *   (default: false).
+ * @property {DDLToolsConfigResetOptions} reset - Options customizing behavior
+ *   when the `reset` method is called.
+ * @property {DDLToolsConfigValidator} validator - A digital data layer
+ *   validator, such as the one presented by `ddl-validator`.
+ *
+ * TODO
+ */
+
+/**
  * Provides digital data layer helper functions supporting data layer schema
  * validation for highly-decoupled analytics reporting.
  *
@@ -208,7 +257,7 @@ if (!ddlTools.validate()) {
    * @example
 ddlTools.configure({
   logger: specialLogger,
-  shouldThrow: true
+  throw: true
 });
    * @params {object} options - The new settings to be used
    * @returns {object} - Self reference for chaining

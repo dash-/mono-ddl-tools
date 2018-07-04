@@ -1,3 +1,27 @@
+## Classes
+
+<dl>
+<dt><a href="#DDLTools">DDLTools</a></dt>
+<dd></dd>
+</dl>
+
+## Typedefs
+
+<dl>
+<dt><a href="#DDLToolsConfigResetOptions">DDLToolsConfigResetOptions</a></dt>
+<dd><p>DDLTools reset options.</p>
+</dd>
+<dt><a href="#DDLToolsConfigLogger">DDLToolsConfigLogger</a></dt>
+<dd><p>A logger.</p>
+</dd>
+<dt><a href="#DDLToolsConfigValidator">DDLToolsConfigValidator</a></dt>
+<dd><p>A digital data layer validator.</p>
+</dd>
+<dt><a href="#DDLToolsConfig">DDLToolsConfig</a></dt>
+<dd><p>DDLTools configuration object.</p>
+</dd>
+</dl>
+
 <a name="DDLTools"></a>
 
 ## DDLTools
@@ -185,7 +209,7 @@ methods in this class.
 ```js
 ddlTools.configure({
   logger: specialLogger,
-  shouldThrow: true
+  throw: true
 });
 ```
 <a name="DDLTools+use"></a>
@@ -226,4 +250,59 @@ whether this page is in development, staging, or production.
 | Param | Type | Description |
 | --- | --- | --- |
 | value | <code>string</code> | value to set |
+
+<a name="DDLToolsConfigResetOptions"></a>
+
+## DDLToolsConfigResetOptions
+DDLTools reset options.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| include | <code>Array.&lt;string&gt;</code> | Keys to be removed upon reset |
+| exclude | <code>Array.&lt;string&gt;</code> | Keys to be ignored upon reset |
+
+<a name="DDLToolsConfigLogger"></a>
+
+## DDLToolsConfigLogger
+A logger.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| debug | <code>function</code> | Function to call for non-critical logging |
+| error | <code>function</code> | Function to call for critical logging |
+
+<a name="DDLToolsConfigValidator"></a>
+
+## DDLToolsConfigValidator
+A digital data layer validator.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| operationIsValid | <code>function</code> | Function called to determine whether   changing a property at a path specified to a value specified should be   allowed. |
+| configure | <code>function</code> | Function called to configure the validator. |
+
+<a name="DDLToolsConfig"></a>
+
+## DDLToolsConfig
+DDLTools configuration object.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| logger | <code>boolean</code> \| [<code>DDLToolsConfigLogger</code>](#DDLToolsConfigLogger) | Either true to enable   logging with the default logger; false to disable logging; or an   actual logger object with appropriate methods to use for logging (default:   true). |
+| throw | <code>boolean</code> | True if methods should throw an exception when an   invalid operation is detected; false if exceptions should be ignored   (default: false). |
+| verbose | <code>boolean</code> | True to enable extra logging information; false   to keep the console clean (default)   invalid operation is detected; false if exceptions should be ignored   (default: false). |
+| reset | [<code>DDLToolsConfigResetOptions</code>](#DDLToolsConfigResetOptions) | Options customizing behavior   when the `reset` method is called. |
+| validator | [<code>DDLToolsConfigValidator</code>](#DDLToolsConfigValidator) | A digital data layer   validator, such as the one presented by `ddl-validator`. TODO |
 

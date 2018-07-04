@@ -8,7 +8,7 @@ const pagePlugin = {
 };
 
 const ddlOptions = {
-  shouldThrow: false,
+  throw: false,
   logger: false,
   emitEvents: false,
 };
