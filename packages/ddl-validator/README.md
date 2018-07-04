@@ -3,6 +3,7 @@
 Provides schema validation for development.  In production, schema validation is
 typically disabled (the schema validator is a development dependency).
 
+
 ## Installation
 
 Via `yarn`:
@@ -18,10 +19,41 @@ npm install --save 'ddl-validator'
 ```
 
 
-<a name="usage"></a>
-
 ## Usage
 
+This package was built for use with `ddl-tools`.  If using it in this way, you
+don't need to do much with this package directly, besides importing and
+instantiating it before passing it to the `DDLTools` instance.  For example:
+
+```js
+import DDLTools from 'ddl-tools';
+import DDLValidator from 'ddl-validator';
+import schema from './path/to/mySchema';
+
+const ddlValidator = new DDLValidator(schema);
+const ddlTools = new DDLTools(window.digitalData, ddlValidator);
+```
+
+However, if you're using this for another purpose, the usage will typically
+include importing the class and a schema, instantiating it, and calling the
+`operationIsValid` method for determining whether the `path` specified may be
+set to the `value` specified.  For example:
+
+```js
+import Validator from 'ddl-validator';
+import schema from './path/to/mySchema';
+import loSet from 'lodash.set';
+
+const validator = new Validator(schema);
+
+// ...
+
+const updateIfValid = (data, path, value) => {
+  if (validator.operationIsValid(path, value)) {
+    loSet(data, path, value);
+  }
+};
+```
 
 
 ## Technical Documentation
@@ -42,6 +74,7 @@ cd mono-ddl-tools/packages/ddl-validator
 yarn install
 npm run build
 ```
+
 
 ## Tests
 
@@ -71,6 +104,7 @@ Started
 Finished in 0.266 seconds
 ```
 
+
 ## Contribute
 
 The easiest way to contribute is to
@@ -89,5 +123,4 @@ PR against the main repository.  More information can be found on this topic in
 Rob Allen's guide:
 
 * [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
-
 

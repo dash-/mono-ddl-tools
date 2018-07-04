@@ -2,7 +2,7 @@
 
 Monorepo featuring:
 * [Digital Data Layer (DDL) helper utility package](#package-ddl-tools)
-* [DDL validator](#package-ddl-validator)
+* [DDL validator package](#package-ddl-validator)
 * [Plugins packages](#package-plugins)
 * [Examples package](#package-ddl-tools-examples)
 

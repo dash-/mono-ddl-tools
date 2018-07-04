@@ -3,6 +3,7 @@
 Product plugin for ddl-tools, a digital data layer helper utility with data layer
 schema validation for highly-decoupled analytics reporting.
 
+
 ## Installation
 
 Via `yarn`:
@@ -17,9 +18,38 @@ Via `npm`
 npm install --save ddl-tools-plugin-product
 ```
 
-<a name="usage"></a>
 
 ## Usage
+
+To use this plugin, you will need to instantiate `DDLTools` like you would
+typically do.  You will also need to import this plugin, and call the `use`
+method to load the plugin into the `DDLTools` instance.
+
+For example:
+
+```js
+import DDLTools from 'ddl-tools';
+import DDLValidator from 'ddl-validator';
+import productPlugin from 'ddl-tools-plugin-product';
+import schema from './path/to/mySchema';
+
+const ddlValidator = new DDLValidator(schema);
+const ddlTools = new DDLTools(window.digitalData, ddlValidator);
+ddlTools.use(productPlugin);
+```
+
+Once loaded, additional methods and classes will be present on the `DDLTools`
+instance.  For example:
+
+```
+const product = new ddlTools.Product();
+product.setProductId(productId);
+ddlTools.addProduct(product);
+```
+
+See the [Technical Documentation](../../docs/ddl-tools-plugin-product.md) for
+more detailed information on what methods and classes are added by this plugin.
+
 
 ## Technical Documentation
 
@@ -39,6 +69,7 @@ cd mono-ddl-tools/packages/ddl-tools-plugin-product
 yarn install
 npm run build
 ```
+
 
 ## Tests
 
@@ -68,6 +99,7 @@ Started
 Finished in 0.028 seconds
 ```
 
+
 ## Contribute
 
 The easiest way to contribute is to
@@ -86,5 +118,4 @@ PR against the main repository.  More information can be found on this topic in
 Rob Allen's guide:
 
 * [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
-
 

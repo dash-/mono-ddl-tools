@@ -6,6 +6,7 @@ external data layer schema validation (see [ddl-validator](packages/ddl-validato
 It can also be extended to provide additional functionality by passing
 specialized plugins to the `use` function.
 
+
 ## Installation
 
 Via `yarn`:
@@ -21,10 +22,92 @@ npm install --save 'ddl-tools'
 ```
 
 
-<a name="usage"></a>
-
 ## Usage
 
+### Instantiation
+
+To use, you will need to import the DDLTools class, which is the default export
+of the `ddl-tools` package.  You will also need a DDL validator, which you can
+either custom-build or just use the `ddl-validator` package.  You will also
+require a DDL schema, which is typically a custom-built JSON Schema.
+
+Next you will want to create an instance of the DDL validator, passing it your
+schema.  Finally, you will create a DDLTools object, passing a reference to the
+digital data object you wish to use (such as `window.digitalData`) as well as
+the DDL validator instance.
+
+For example:
+
+```js
+import DDLTools from 'ddl-tools';
+import DDLValidator from 'ddl-validator';
+import schema from './path/to/mySchema';
+
+const ddlValidator = new DDLValidator(schema);
+const ddlTools = new DDLTools(window.digitalData, ddlValidator);
+```
+
+### Configuration
+
+You will also probably want to configure your DDLTools instance.  This can be
+done by either passing a plain configuration object as a third parameter to the
+constructor, or by calling `configure()` method and passing the plain
+configuration object at that time.
+
+```js
+const ddlConfig = {
+  reset: {
+    exclude: ['user'],
+  },
+  emitEvents: true,
+};
+const ddlTools = new DDLTools(window.digitalData, ddlValidator, ddlConfig);
+```
+
+```js
+ddlTools.configure(ddlConfig);
+```
+
+### Plugins
+
+One major benefit of `ddl-tools` is the use of the convenience methods loaded
+via plugins.  These are loaded via the `use` method.
+
+```
+import pageDeepPlugin from 'ddl-tools-plugin-page-deep';
+ddlTools.use(pageDeepPlugin);
+```
+
+### Operations
+
+Once instantiated, you may perform a myriad of operations to manipulate the
+digital data object.  For example, to process a new page after a hash change in
+a single page application, you might reset the digital data layer and set the
+page name.
+
+```
+ddlTools
+  .reset()
+  .set('page.pageInfo.pageName', 'cart:review');
+```
+
+Or, you might prefer to do the same with the `ddl-tools-plugin-page-deep` plugin:
+
+```
+ddlTools
+  .reset()
+  .setPageName('cart:review');
+```
+
+You can also use `ddl-tools` to retrieve the values (although it's basically
+just a thin wrapper around Lodash's `get` method).
+
+```
+ddlTools.get('page.pageInfo.pageName');
+```
+
+See the [Technical Documentation](../../docs/ddl-tools.md) for more details
+about what is possible.
 
 
 ## Technical Documentation
@@ -56,6 +139,7 @@ yarn install
 npm run build
 ```
 
+
 ## Tests
 
 To run the unit tests, you must have this package
@@ -84,6 +168,7 @@ Started
 Finished in 0.024 seconds
 ```
 
+
 ## Contribute
 
 The easiest way to contribute is to
@@ -102,5 +187,4 @@ PR against the main repository.  More information can be found on this topic in
 Rob Allen's guide:
 
 * [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
-
 
