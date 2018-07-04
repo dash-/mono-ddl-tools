@@ -1,6 +1,6 @@
 {
   "name": "ddl-tools-plugin-transaction",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Transaction plugin for ddl-tools, a digital data layer helper utility with data layer schema validation for highly-decoupled analytics reporting",
   "license": "Apache-2.0",
   "main": "lib/transactionPlugin.js",
