@@ -1,0 +1,53 @@
+{
+  "name": "ddl-validator",
+  "version": "0.0.3",
+  "description": "Digital Data Layer schema validation for ddl-tools",
+  "license": "Apache-2.0",
+  "main": "lib/DDLValidator.js",
+  "directories": {
+    "lib": "lib/"
+  },
+  "files": [
+    "README.md",
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "lint": "eslint . && echo 'Lint finished...\n'",
+    "pretest": "npm run -s lint",
+    "prepublish": "npm run build",
+    "test": "jasmine test/specs/**/*Spec.js",
+    "update": "updtr",
+    "watch": "watch 'clear && npm run -s test' src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dash-/mono-ddl-tools"
+  },
+  "author": "David Ash",
+  "bugs": {
+    "url": "https://github.com/dash-/mono-ddl-tools/issues"
+  },
+  "homepage": "https://github.com/dash-/mono-ddl-tools",
+  "devDependencies": {
+    "ajv": "^6.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "ddl-json-schema": "^2.0.0",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jasmine": "^2.9.1",
+    "jasmine": "^2.8.0",
+    "lodash.clonedeep": "^4.5.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "updtr": "^2.0.0",
+    "watch": "^1.0.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "lodash.set": "^4.3.2"
+  }
+}

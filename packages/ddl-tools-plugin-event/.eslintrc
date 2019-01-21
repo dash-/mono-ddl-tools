@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jasmine": true
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+
+  "extends": "airbnb-base",
+
+  "plugins": [
+    "jasmine"
+  ],
+
+  "rules": {
+    "jasmine/no-focused-tests": "error",
+  }
+}

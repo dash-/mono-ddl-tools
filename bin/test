@@ -1,0 +1,93 @@
+#!/bin/bash
+repoRoot="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools'
+echo '----------------------------------------'
+cd packages/ddl-tools/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-validator'
+echo '----------------------------------------'
+cd packages/ddl-validator/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-cart'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-cart/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-cart-deep'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-cart-deep/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-event'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-event/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-page'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-page/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-page-deep'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-page-deep/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-product'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-product/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-transaction'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-transaction/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-transaction-deep'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-transaction-deep/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
+echo 'ddl-tools-plugin-user'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-user/
+npm run test
+cd $repoRoot
+
+
