@@ -296,6 +296,17 @@ describe('DDLTools', () => {
         }],
       });
     });
+
+    it('should handle invalid paths smoothly', () => {
+      const digitalData = {};
+      const ddl = buildDDL(digitalData);
+      ddl.push(null, {
+        productInfo: {
+          productName: 'test-productName',
+        },
+      });
+      expect(digitalData).toEqual({});
+    });
   });
 
   describe('validate()', () => {
@@ -332,6 +343,16 @@ describe('DDLTools', () => {
             pageName: 'test-pageName',
           },
         },
+      });
+    });
+  });
+
+  describe('publish()', () => {
+    it('should return a promise', (done) => {
+      const digitalData = {};
+      const ddl = buildDDL(digitalData);
+      ddl.publish('page').then(() => {
+        done();
       });
     });
   });

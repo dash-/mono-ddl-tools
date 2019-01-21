@@ -37,6 +37,15 @@ const { errorGenerators } = Logger;
  */
 
 /**
+ * DDLTools DOM event emission options.
+ *
+ * @typedef DDLToolsConfigEmitEventsOptions
+ * @property {string} eventPrefix - String to prefix event names with
+ * @property {string} publishPrefix - String to prefix publish event names with
+ * @property {string} resetName - Name of reset events
+ */
+
+/**
  * DDLTools configuration object.
  *
  * @typedef DDLToolsConfig
@@ -55,8 +64,9 @@ const { errorGenerators } = Logger;
  *   when the `reset` method is called.
  * @property {DDLToolsConfigValidator} validator - A digital data layer
  *   validator, such as the one presented by `ddl-validator`.
- *
- * TODO
+ * @property {boolean|DDLToolsConfigEmitEventsOptions} emitEvents - Either true
+ *   to enable automatic DOM event emission; false to disable the same; or a
+ *   configuration object to enable and configure the same (default: false)
  */
 
 /**
@@ -219,10 +229,13 @@ ddlTools.push("transaction.item", {
    * @example
 ddlTools.publish('page');
    * @param {string} path - Indicates what has been published
-   * @returns {object} - Self reference for chaining
+   * @returns {Promise} - Promise to be resolved when publish is complete
    */
   this.publish = function publish(path) {
     eventEmitter.emitPublish(path);
+    return new Promise((resolve) => {
+      setTimeout(resolve, 20);
+    });
   };
 
   /**
