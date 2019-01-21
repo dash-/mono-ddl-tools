@@ -112,6 +112,6 @@ const Logger = function Logger() {
   };
 };
 
-Logger.errorGenerator = errorGenerators;
+Logger.errorGenerators = errorGenerators;
 
 module.exports = Logger;

@@ -17,6 +17,9 @@
 <dt><a href="#DDLToolsConfigValidator">DDLToolsConfigValidator</a></dt>
 <dd><p>A digital data layer validator.</p>
 </dd>
+<dt><a href="#DDLToolsConfigEmitEventsOptions">DDLToolsConfigEmitEventsOptions</a></dt>
+<dd><p>DDLTools DOM event emission options.</p>
+</dd>
 <dt><a href="#DDLToolsConfig">DDLToolsConfig</a></dt>
 <dd><p>DDLTools configuration object.</p>
 </dd>
@@ -35,7 +38,7 @@
     * [.get(path, [defaultValue])](#DDLTools+get)
     * [.merge(path, source)](#DDLTools+merge) ⇒ <code>object</code>
     * [.push(path, value)](#DDLTools+push) ⇒ <code>object</code>
-    * [.publish(path)](#DDLTools+publish) ⇒ <code>object</code>
+    * [.publish(path)](#DDLTools+publish) ⇒ <code>Promise</code>
     * [.validate()](#DDLTools+validate) ⇒ <code>boolean</code>
     * [.configure()](#DDLTools+configure) ⇒ <code>object</code>
     * [.use(plugin)](#DDLTools+use) ⇒ <code>object</code>
@@ -156,12 +159,12 @@ ddlTools.push("transaction.item", {
 ```
 <a name="DDLTools+publish"></a>
 
-### ddlTools.publish(path) ⇒ <code>object</code>
+### ddlTools.publish(path) ⇒ <code>Promise</code>
 With event emission enabled, dispatches a "publish" event.  This is
 useful for some types of analytics event handling.
 
 **Kind**: instance method of [<code>DDLTools</code>](#DDLTools)  
-**Returns**: <code>object</code> - - Self reference for chaining  
+**Returns**: <code>Promise</code> - - Promise to be resolved when publish is complete  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -290,6 +293,20 @@ A digital data layer validator.
 | operationIsValid | <code>function</code> | Function called to determine whether   changing a property at a path specified to a value specified should be   allowed. |
 | configure | <code>function</code> | Function called to configure the validator. |
 
+<a name="DDLToolsConfigEmitEventsOptions"></a>
+
+## DDLToolsConfigEmitEventsOptions
+DDLTools DOM event emission options.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| eventPrefix | <code>string</code> | String to prefix event names with |
+| publishPrefix | <code>string</code> | String to prefix publish event names with |
+| resetName | <code>string</code> | Name of reset events |
+
 <a name="DDLToolsConfig"></a>
 
 ## DDLToolsConfig
@@ -304,5 +321,6 @@ DDLTools configuration object.
 | throw | <code>boolean</code> | True if methods should throw an exception when an   invalid operation is detected; false if exceptions should be ignored   (default: false). |
 | verbose | <code>boolean</code> | True to enable extra logging information; false   to keep the console clean (default)   invalid operation is detected; false if exceptions should be ignored   (default: false). |
 | reset | [<code>DDLToolsConfigResetOptions</code>](#DDLToolsConfigResetOptions) | Options customizing behavior   when the `reset` method is called. |
-| validator | [<code>DDLToolsConfigValidator</code>](#DDLToolsConfigValidator) | A digital data layer   validator, such as the one presented by `ddl-validator`. TODO |
+| validator | [<code>DDLToolsConfigValidator</code>](#DDLToolsConfigValidator) | A digital data layer   validator, such as the one presented by `ddl-validator`. |
+| emitEvents | <code>boolean</code> \| [<code>DDLToolsConfigEmitEventsOptions</code>](#DDLToolsConfigEmitEventsOptions) | Either true   to enable automatic DOM event emission; false to disable the same; or a   configuration object to enable and configure the same (default: false) |
 
