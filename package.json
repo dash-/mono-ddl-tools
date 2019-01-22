@@ -1,4 +1,5 @@
 {
+  "license": "Apache-2.0",
   "scripts": {
     "build-doc-md": "jsdoc2md",
     "build-docs-md": "bin/build-docs-md",
