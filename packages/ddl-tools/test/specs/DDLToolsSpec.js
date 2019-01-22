@@ -193,6 +193,15 @@ describe('DDLTools', () => {
         ],
       });
     });
+
+    it('should emit a reset DOM event when emitEvents is enabled', () => {
+      const digitalData = {};
+      const ddl = buildDDL(digitalData);
+      ddl.configure({
+        emitEvents: true,
+      });
+      ddl.reset();
+    });
   });
 
   describe('set()', () => {
