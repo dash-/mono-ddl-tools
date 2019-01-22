@@ -141,7 +141,7 @@ const EventEmitter = function EventEmitter() {
     if (!config) {
       return;
     }
-    this.emit(config.emitEvents.resetName);
+    this.emit(config.resetName);
   };
 
   /**
