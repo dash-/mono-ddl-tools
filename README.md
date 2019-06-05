@@ -168,6 +168,17 @@ For more information, see:
 * [Technical Documentation](docs/ddl-tools-plugin-transaction-deep.md)
 
 
+<a name="package-ddl-tools-plugin-transaction-list"></a>
+#### Plugin Package: ddl-tools-plugin-transaction-list
+
+Transaction List plugin for recording information about lists of transactions,
+such as an order history.
+
+For more information, see:
+* [`packages/ddl-tools-plugin-transaction-list/README.md`](packages/ddl-tools-plugin-transaction-list)
+* [Technical Documentation](docs/ddl-tools-plugin-transaction-list.md)
+
+
 <a name="package-ddl-tools-plugin-user"></a>
 #### Plugin Package: ddl-tools-plugin-user
 

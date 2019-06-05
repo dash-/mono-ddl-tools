@@ -84,6 +84,14 @@ cd $repoRoot
 
 echo ''
 echo '----------------------------------------'
+echo 'ddl-tools-plugin-transaction-list'
+echo '----------------------------------------'
+cd packages/ddl-tools-plugin-transaction-list/
+npm run test
+cd $repoRoot
+
+echo ''
+echo '----------------------------------------'
 echo 'ddl-tools-plugin-user'
 echo '----------------------------------------'
 cd packages/ddl-tools-plugin-user/

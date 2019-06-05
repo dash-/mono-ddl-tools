@@ -72,6 +72,11 @@ from="$packages/ddl-tools-plugin-transaction/src/transactionPlugin.js"
 to="$docs/ddl-tools-plugin-transaction.md"
 buildDoc "$from" "$to"
 
+# ddl-tools-plugin-transaction
+from="$packages/ddl-tools-plugin-transaction-list/src/transactionListPlugin.js"
+to="$docs/ddl-tools-plugin-transaction-list.md"
+buildDoc "$from" "$to"
+
 # ddl-tools-plugin-user
 from="$packages/ddl-tools-plugin-user/src/userPlugin.js"
 to="$docs/ddl-tools-plugin-user.md"
