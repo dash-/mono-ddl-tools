@@ -122,6 +122,7 @@ about what is possible.
 * [ddl-tools-plugin-product](../../docs/ddl-tools-plugin-product.md)
 * [ddl-tools-plugin-transaction-deep](../../docs/ddl-tools-plugin-transaction-deep.md)
 * [ddl-tools-plugin-transaction](../../docs/ddl-tools-plugin-transaction.md)
+* [ddl-tools-plugin-transaction-list](../../docs/ddl-tools-plugin-transaction-list.md)
 * [ddl-tools-plugin-user](../../docs/ddl-tools-plugin-user.md)
 
 
