@@ -743,4 +743,22 @@ describe('Plugin: transactionList', () => {
       });
     });
   });
+
+  describe('setTransactionList()', () => {
+    it('should set transaction list to transaction list provided', () => {
+      const digitalData = {};
+      const ddlTools = new DDLTools(digitalData, schemaValidator);
+      ddlTools.use(trxListPlugin);
+      ddlTools.setTransactionList([{
+        transactionID: 'test-transactionID',
+      }]);
+      expect(digitalData).toEqual({
+        transactionList: [
+          {
+            transactionID: 'test-transactionID',
+          },
+        ],
+      });
+    });
+  });
 });
