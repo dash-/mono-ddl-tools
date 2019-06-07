@@ -671,6 +671,19 @@ ddlTools.addTransactionListItem(trxListItem);
     this.push(['transactionList'], TransactionListItem.normalize(item));
     return this;
   },
+
+  /**
+   * Sets the transaction list to the transaction list provided.
+   *
+   * @example
+ddlTools.setTransactionList(transactionList);
+   * @param {array} transactionList - A full list of transactions
+   * @returns {object} - Self reference for chaining
+   */
+  setTransactionList: function setTransactionList(transactionList) {
+    this.set(['transactionList'], transactionList);
+    return this;
+  },
 };
 
 Object.defineProperty(exports, '__esModule', {
