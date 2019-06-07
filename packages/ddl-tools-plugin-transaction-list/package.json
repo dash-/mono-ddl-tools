@@ -1,6 +1,6 @@
 {
   "name": "ddl-tools-plugin-transaction-list",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Transaction list plugin for ddl-tools, a digital data layer helper utility with data layer schema validation for highly-decoupled analytics reporting",
   "license": "Apache-2.0",
   "main": "lib/transactionListPlugin.js",
